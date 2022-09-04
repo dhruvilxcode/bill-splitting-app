@@ -8,6 +8,12 @@
 </a>
 
 
+## Idea 💡
+Create App where we can create group and add members to share the bill & split the amount equally with members.
+
+## Solution 👨🏻‍💻
+I Designed & Coded app, which is Cross Platform, and simple to use. In the same app we can get paid for bills, and can pay to groups whom you owe.
+
 ## Features
 - 📱 Login with Phone & OTP
 - 🤝 Create Groups
@@ -34,7 +40,9 @@
 ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
 
 ## Developer & Designer
-[Dhruvil Patel](https://www.findcoder.io/u/dhruvil)
+[Twitter: Dhruvilxcode](https://twitter.com/dhruvilxcode)
+
+[Findcoder: Dhruvil](https://www.findcoder.io/u/dhruvil)
 
 [Github:dhruvilxcode](https://github.com/dhruvilxcode)
 
