@@ -6,6 +6,7 @@ import 'package:splitty/app/main_screen/main_screen.dart';
 import 'package:splitty/app/login/profile_setup_screen.dart';
 import 'package:splitty/common/alert_dialog.dart';
 import 'package:splitty/config/colors.dart';
+import 'package:splitty/config/images.dart';
 import 'package:splitty/providers/user_provider.dart';
 
 import 'controller/auth_controller.dart';
@@ -129,7 +130,7 @@ class _OtpSendAndVerifyScreenState
       if (userData != null) {
         UserModel userModel = UserModel(
           name: userData["name"] ?? "",
-          phoneNumber: userData["phoneNumber"] ?? "",
+          phoneNumber: user.phoneNumber ?? "",
           profileImage: userData["profileImage"] ?? "",
           upiId: userData["upiId"] ?? "",
           uid: user.uid,
@@ -149,6 +150,15 @@ class _OtpSendAndVerifyScreenState
           );
         } else {
           // goto profile setup
+          UserModel userModel = UserModel(
+            name: userData["name"] ?? "",
+            phoneNumber: user.phoneNumber ?? "",
+            profileImage: userData["profileImage"] ?? "",
+            upiId: userData["upiId"] ?? "",
+            uid: user.uid,
+            isMineProfile: true,
+          );
+          ref.read(userProvider.state).state = userModel;
 
           if (!mounted) return;
           Navigator.pushAndRemoveUntil(
@@ -162,6 +172,15 @@ class _OtpSendAndVerifyScreenState
         }
       } else {
         // goto profile setup
+        UserModel userModel = UserModel(
+          name: "",
+          phoneNumber: user.phoneNumber ?? "",
+          profileImage: memojis.first.imageURL,
+          upiId: "",
+          uid: user.uid,
+          isMineProfile: true,
+        );
+        ref.read(userProvider.state).state = userModel;
 
         if (!mounted) return;
         Navigator.pushAndRemoveUntil(

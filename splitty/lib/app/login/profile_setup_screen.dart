@@ -107,16 +107,15 @@ class _ProfileSetupScreenState extends ConsumerState<ProfileSetupScreen> {
         NavigatorState navigatorState = Navigator.of(context);
         await addUserInfo(name: name, profileImage: image, upiId: upiId);
 
-        ref.read(userProvider.state).update(
-              (state) => UserModel(
-                name: name,
-                phoneNumber: state.phoneNumber,
-                profileImage: image,
-                upiId: upiId,
-                isMineProfile: true,
-                uid: state.uid,
-              ),
-            );
+        final oldUser = ref.read(userProvider);
+        ref.read(userProvider.state).state = UserModel(
+          name: name,
+          phoneNumber: oldUser.phoneNumber,
+          profileImage: image,
+          upiId: upiId,
+          isMineProfile: true,
+          uid: oldUser.uid,
+        );
 
         if (widget.isFirstTimeSetup) {
           navigatorState.pushNamedAndRemoveUntil("/main", (route) => false);
