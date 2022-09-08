@@ -6,6 +6,9 @@
 <a href="https://github.com/dhruvilxcode/bill-splitting-app/blob/main/splitty.apk?raw=true" download>
     <img src="https://dhruvilxcode.github.io/splitterapp/assets/download-apk-badge.svg" height="70px" />
 </a>
+<a href="https://play.google.com/store/apps/details?id=app.splitty.android" download>
+    <img src="https://dhruvilxcode.github.io/splitterapp/assets/google-play-badge.png" height="70px" />
+</a>
 
 
 ## Idea 💡
@@ -31,7 +34,7 @@ I Designed & Coded app, which is Cross Platform, and simple to use. In the same 
 - **UI/UX design** part was crucial, i took arround 2-3 days for making design ready in the Figma.
 - Selection of **Phone OTP** Authentication. I selected this method as we all use our phone number daily, so why remember passwords and username, OTP auth is so easy for end users.
 - **Data Modeling**, this part was very important and i acheived it in given timeline.
-- **Play Store release**, i submitted app to play store, it's in review, hopefully it will be live soon.
+- **Play Store release**, i submitted app to play store, it's Live, [Download from Google Play](https://play.google.com/store/apps/details?id=app.splitty.android).
 
 
 ## Technologies
